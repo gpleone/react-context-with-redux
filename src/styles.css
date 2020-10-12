@@ -1,0 +1,17 @@
+.App {
+}
+
+.actions,
+.form {
+  margin: 16px 0;
+}
+
+.form {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.level {
+  border: 1px solid #ddd;
+  padding: 4px;
+}
