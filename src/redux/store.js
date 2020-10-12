@@ -18,7 +18,7 @@ const handlers = {
   },
   COMPLETE: (state, action) => {
     return state.map((item) => {
-      return item.id === action.payload ? { ...item, completed: true } : item;
+      return item.id === action.payload ? { ...item, completed: !item.completed } : item;
     });
   }
 };

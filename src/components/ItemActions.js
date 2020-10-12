@@ -15,7 +15,7 @@ const ItemActions = ({ id }) => {
         className="button is-success is-small"
         onClick={() => dispatch({ type: "COMPLETE", payload: id })}
       >
-        complete
+        toggle complete
       </button>
     </div>
   );

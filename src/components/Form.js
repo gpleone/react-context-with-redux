@@ -12,16 +12,18 @@ const Form = () => {
             ref={inputField}
             className="input is-info"
             type="text"
-            placeholder="Primary input"
+            placeholder="write your todo task"
           />
         </div>
       </div>
       <div className="">
         <button
           className="is-info button"
-          onClick={() =>
-            dispatch({ type: "ADD", payload: inputField.current.value })
-          }
+          onClick={() => {
+            if (inputField.current.value.trim() === "") return;
+            dispatch({ type: "ADD", payload: inputField.current.value });
+            inputField.current.value = "";
+          }}
         >
           add todo
         </button>
